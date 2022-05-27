@@ -1,0 +1,9 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: envoy
+spec:
+  containers:
+    - image: ghcr.io/jrdbb/gamedock_web_envoy:1.0.0
+      name: envoy
