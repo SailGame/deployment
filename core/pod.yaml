@@ -7,3 +7,6 @@ spec:
   containers:
     - image: ghcr.io/sailgame/core:1.5.0
       name: core
+
+  imagePullSecrets:
+    - name: dockerconfigjson-github-com
