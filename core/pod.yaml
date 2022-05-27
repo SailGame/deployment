@@ -5,5 +5,5 @@ metadata:
   name: core
 spec:
   containers:
-    - image: ghcr.io/jrdbb/core:1.5.0
+    - image: ghcr.io/sailgame/core:1.5.0
       name: core
