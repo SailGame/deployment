@@ -5,5 +5,5 @@ metadata:
   name: envoy
 spec:
   containers:
-    - image: ghcr.io/sailgame/gamedock_web_envoy:1.0.0
+    - image: ghcr.io/sailgame/gamedock_web_envoy:v1.0.0
       name: envoy
