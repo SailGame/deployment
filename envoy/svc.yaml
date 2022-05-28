@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: core-svc
+  name: core-envoy-svc
 spec:
   selector:
-    app: core
+    app: core-envoy
   ports:
     - protocol: TCP
       port: 8080
-      targetPort: core-port
+      targetPort: core-envoy-port

@@ -2,8 +2,19 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: envoy
+  name: core-envoy
 spec:
   containers:
-    - image: ghcr.io/sailgame/gamedock_web_envoy:v1.0.0
+    - image: envoyproxy/envoy:v1.22.0
       name: envoy
+      volumeMounts:
+      - name: config
+        mountPath: "/etc/envoy"
+        readOnly: true
+      ports:
+      - name: core-envoy-port
+        containerPort: 8080
+  volumes:
+    - name: config
+      configMap:
+        name: core-envoy-config
